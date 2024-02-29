@@ -15,13 +15,13 @@ install.packages(“FORTLS”)
 library(FORTLS)
 ```
 
+#### Escaneo único de TLS
+
 ```r
 # Establecimiento del directorio de trabajo (se aconseja que sea el mismo en dir.data y dir.result)
 
 dir.data <- "…"
 dir.result <- "…"
-
-# Escaneo único de TLS
 
 # Descarga de la nube de puntos en formato laz
 
