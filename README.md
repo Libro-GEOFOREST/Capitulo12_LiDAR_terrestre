@@ -38,7 +38,6 @@ SingleScan <- normalize(
   dir.data = dir.data, dir.result = dir.result)
 ```
 
-
 ```r
 # Escaneo múltiple de TLS (o tecnología SLAM)
 
@@ -57,6 +56,8 @@ MultiScan <- normalize(
   scan.approach = "multi",
   dir.data = dir.data, dir.result = dir.result)
 ```
+
+### Variables de masa (o dasométricas)
 
 ```r
 # Escaneo único de TLS
@@ -92,6 +93,8 @@ met.var <- metrics.variables(
   scan.approach = "multi",
   dir.data = dir.data, dir.result = dir.result)
 ```
+
+### Rutina para automatizar el flujo de trabajo con varias parcelas
 
 ```r
 # Descarga de las nubes de puntos en formato laz (pertenecientes a escaneos únicos de TLS)
@@ -133,6 +136,8 @@ met.var <- metrics.variables(
   scan.approach = "single",
   dir.data = dir.data, dir.result = dir.result)
 ```
+
+### Optimización del diseño de parcela
 
 ```r
 # A continuación se descargan los datos homólogos a los 2 escaneos de TLS medidos en campo:
