@@ -38,6 +38,8 @@ SingleScan <- normalize(
   dir.data = dir.data, dir.result = dir.result)
 ```
 
+En el código se han utilizado los argumentos más relevantes de la función normalize, que serían el nombre del archivo (incluyendo la extensión) conteniendo la nube de puntos (argumento las), el directorio donde se localiza la nube de puntos a normalizar (argumento dir.data) y donde se volcarán los resultados (argumento dir.result). Como ya se ha mencionado, es totalmente recomendable que ambos directorios coincidan a lo largo de todo el flujo de trabajo. Además, se incluyen otros argumentos como las coordenadas del centro de la parcela (argumentos x.center e y.center) que en este caso deben coincidir con el punto donde se estacionó el TLS por tratarse de un escaneo único (en este ejemplo este punto tiene coordenadas x=0 e y=0 en la nube de puntos original). Hay que tener en cuenta que, de no especificar las coordenadas del centro de la parcela, la función normalize considerará como punto central las medias aritméticas entre los valores máximos y mínimos de las coordenadas x e y (x=(x_min+x_max)/2; y=(y_min+y_max)/2). También se especificó una distancia máxima desde el centro de la parcela de 15 m (argumento max.dist), la cual, en caso de querer estimar variables de masa debería ser como mínimo igual al radio de parcela considerado como se verá más adelante. Por último, se asignó un identificador a la nube de puntos normalizada (argumento id), al cual se le asignaría el valor 1 en caso de no especificarlo en este argumento. En el caso de trabajar con escaneos múltiples de TLS o tecnología SLAM, hay que añadir el argumento scan.approach = "multi", tal y como se muestra en el siguiente código:
+
 ```r
 # Escaneo múltiple de TLS (o tecnología SLAM)
 
@@ -57,8 +59,6 @@ MultiScan <- normalize(
   dir.data = dir.data, dir.result = dir.result)
 ```
 
-### Variables de masa (o dasométricas)
-
 ```r
 # Escaneo único de TLS
 
@@ -73,6 +73,8 @@ treeMultiScan <- tree.detection.multi.scan(
   d.top = 20, # Diámetro en punta delgada (cm)
   dir.result = dir.result)
 ```
+
+### Variables de masa (o dasométricas)
 
 ```r
 # Escaneo único de TLS
