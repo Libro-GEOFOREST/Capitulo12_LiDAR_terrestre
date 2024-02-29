@@ -21,8 +21,7 @@ dir.result <- "…"
 
 # Descarga de la nube de puntos en formato laz
 
-download.file("https://www.dropbox.com/s/17yl25pbrapat52/PinusRadiata.laz?dl=1",
-destfile = file.path(dir.data, "PinusRadiata.laz"), mode = "wb")
+download.file("https://www.dropbox.com/s/17yl25pbrapat52/PinusRadiata.laz?dl=1", destfile = file.path(dir.data, "PinusRadiata.laz"), mode = "wb")
 
 # Normalización
 
