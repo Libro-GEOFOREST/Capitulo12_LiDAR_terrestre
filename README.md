@@ -6,6 +6,8 @@ Antonio Jesús Ariza-Salamanca & Juan Alberto Molina-Valero
 
 ## Extracción de parámetros estructurales a nivel de parcela (caso práctico basado en el paquete de R FORTLS)
 
+### Variables de árbol individual (o dendrométricas)
+
 ```r
 # Instalación y carga del paquete
 
@@ -117,7 +119,8 @@ tree.tls <- tree.detection.several.plots(
   scan.approach = "single",
   dir.data = dir.data, dir.result = dir.result)
 
-# Implementación de las metodologías para corregir las estimaciones por las oclusiones generadas según las metodologías de muestreo en la distancia
+# Implementación de las metodologías para corregir las estimaciones por las oclusiones generadas
+# según las metodologías de muestreo en la distancia
 
 tree.ds <- distance.sampling(tree.tls = treeSingleScan)
 
