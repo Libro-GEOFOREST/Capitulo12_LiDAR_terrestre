@@ -23,7 +23,8 @@ dir.result <- "…"
 
 # Descarga de la nube de puntos en formato laz
 
-download.file("https://www.dropbox.com/s/17yl25pbrapat52/PinusRadiata.laz?dl=1", destfile = file.path(dir.data, "PinusRadiata.laz"), mode = "wb")
+download.file("https://www.dropbox.com/s/17yl25pbrapat52/PinusRadiata.laz?dl=1",
+  destfile = file.path(dir.data, "PinusRadiata.laz"), mode = "wb")
 
 # Normalización
 
@@ -41,8 +42,8 @@ SingleScan <- normalize(
 
 # Descarga de la nube de puntos en formato laz
 
-download.file("https://www.dropbox.com/s/i905wj0lavklczb/PinusRadiataMultiScan.laz?dl=1", destfile = file.path(dir.data, "PinusRadiataMultiScan.laz"), 
-mode = "wb")
+download.file("https://www.dropbox.com/s/i905wj0lavklczb/PinusRadiataMultiScan.laz?dl=1",
+  destfile = file.path(dir.data, "PinusRadiataMultiScan.laz"), mode = "wb")
 
 # Normalización
 
@@ -131,7 +132,8 @@ met.var <- metrics.variables(
 ```r
 # A continuación se descargan los datos homólogos a los 2 escaneos de TLS medidos en campo:
 
-download.file("https://www.dropbox.com/scl/fi/amxymzzw36i59fb499058/tree.field.csv?rlkey=f1y9siqnifl963hgs03b51xwc&dl=1", destfile = file.path(dir.data, "tree.field.csv"), mode = "wb")
+download.file("https://www.dropbox.com/scl/fi/amxymzzw36i59fb499058/tree.field.csv?rlkey=f1y9siqnifl963hgs03b51xwc&dl=1",
+  destfile = file.path(dir.data, "tree.field.csv"), mode = "wb")
 
 tree.field <- read.csv("tree.field.csv")
 
