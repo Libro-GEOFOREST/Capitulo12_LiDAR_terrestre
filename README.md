@@ -94,9 +94,11 @@ met.var <- metrics.variables(
 ```r
 # Descarga de las nubes de puntos en formato laz (pertenecientes a escaneos únicos de TLS)
 
-download.file("https://www.dropbox.com/scl/fi/vvv7z9hczg96ks0n6ni16/PinusSylvestris1.laz?rlkey=7pmpim6z0u42i2e6ueyj8k2ct&dl=1", destfile = file.path(dir.data, "PinusSylvestris1.laz"), mode = "wb")
+download.file("https://www.dropbox.com/scl/fi/vvv7z9hczg96ks0n6ni16/PinusSylvestris1.laz?rlkey=7pmpim6z0u42i2e6ueyj8k2ct&dl=1",
+  destfile = file.path(dir.data, "PinusSylvestris1.laz"), mode = "wb")
 
-download.file("https://www.dropbox.com/scl/fi/855o2xqjqvaxezeqe0zic/PinusSylvestris2.laz?rlkey=vbskveu8lu5ooriniyl6n69o6&dl=1", destfile = file.path(dir.data, "PinusSylvestris2.laz"), mode = "wb")
+download.file("https://www.dropbox.com/scl/fi/855o2xqjqvaxezeqe0zic/PinusSylvestris2.laz?rlkey=vbskveu8lu5ooriniyl6n69o6&dl=1",
+  destfile = file.path(dir.data, "PinusSylvestris2.laz"), mode = "wb")
 
 # Especificación de las coordenadas del centro de las parcelas
 
