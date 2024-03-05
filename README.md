@@ -77,7 +77,7 @@ treeMultiScan <- tree.detection.multi.scan(
   d.top = 20, # Diámetro en punta delgada (cm)
   dir.result = dir.result)
 ```
-
+A continuación se muestra la lista de árboles detectados y las variables estimadas para el escaneo múltiple:
 
 | id               | file                 | tree | x      | y      | phi  | h.dist | dbh   | h     | h.com | v    | v.com | SS.max | sinuosity | n.pts | n.pts.red | n.pts.est | n.pts.red.est | partial.occlusion |
 |------------------|----------------------|------|--------|--------|------|--------|-------|-------|-------|------|-------|--------|-----------|-------|-----------|-----------|---------------|-------------------|
