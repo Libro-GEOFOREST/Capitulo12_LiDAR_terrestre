@@ -79,7 +79,7 @@ treeMultiScan <- tree.detection.multi.scan(
 ```
 
 ```{r echo=FALSE}
-kableExtra::scroll_box(kable_input = kableExtra::kable(head(pcd.single), format = "html"), width = "100%")
+kableExtra::scroll_box(kable_input = kableExtra::kable(head(https://github.com/Libro-GEOFOREST/Capitulo15_LiDAR_terrestre/tree/main/Auxiliary/tree.tls.csv), format = "html"), width = "100%")
 ```
 
 ### Variables de masa (o dasométricas)
