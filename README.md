@@ -78,7 +78,7 @@ treeMultiScan <- tree.detection.multi.scan(
   dir.result = dir.result)
 ```
 
-```r
+
 | id               | file                 | tree | x      | y      | phi  | h.dist | dbh   | h     | h.com | v    | v.com | SS.max | sinuosity | n.pts | n.pts.red | n.pts.est | n.pts.red.est | partial.occlusion |
 |------------------|----------------------|------|--------|--------|------|--------|-------|-------|-------|------|-------|--------|-----------|-------|-----------|-----------|---------------|-------------------|
 | GaliciaMultiScan | GaliciaMultiScan.txt | 1    | 0.34   | 3.07   | 1.46 | 3.08   | 31.43 | 21.49 | 7.76  | 0.58 | 0.45  | 2.38   | 1.28      | 1170  | 591       | 803       | 401           | 1                 |
@@ -101,7 +101,7 @@ treeMultiScan <- tree.detection.multi.scan(
 | GaliciaMultiScan | GaliciaMultiScan.txt | 18   | -9.10  | -9.43  | 3.95 | 13.10  | 32.48 | 23.85 | 8.94  | 0.67 | 0.53  | 0.41   | 1.01      | 601   | 285       | 829       | 414           | 0                 |
 | GaliciaMultiScan | GaliciaMultiScan.txt | 19   | -13.42 | 0.20   | 3.13 | 13.42  | 26.94 | 20.15 | 5.53  | 0.40 | 0.26  | 0.43   | 1.01      | 778   | 388       | 688       | 344           | 1                 |
 | GaliciaMultiScan | GaliciaMultiScan.txt | 20   | -7.80  | -12.06 | 4.14 | 14.36  | 29.14 | 23.27 | 7.33  | 0.53 | 0.38  | NA     | NA        | 758   | 371       | 744       | 372           | 1                 |
-```
+
 
 Aunque no se han mencionado hasta ahora, hay dos argumentos que pueden ser interesantes para mejorar la ratio de detección de árboles. Uno es el que define la sección en altura que se utiliza para la detección de árboles (argumento stem.section). Este argumento define la sección libre de ramas y sotobosque en la medida de lo posible que será utilizada para la detección de los fustes de los árboles en base a criterios relacionados con regiones de alta densidad de puntos, la cual en caso de no especificar nada, toma unos valores por defecto que suelen ser adecuados en muchos casos (stem.section = c(0.7, 3.5)). No obstante, estos valores podrán ser modificados dependiendo de las condiciones estructurales del bosque. Otro argumento interesante hace alusión al número de secciones horizontales que se tienen en cuenta tanto para la detección de árboles como para la reconstrucción de los fustes. Cuando no se especifica nada, las funciones para la detección de árboles considerarán secciones a razón de incrementos de 0.3 m desde una altura de 0.4 m hasta la altura máxima de la nube de puntos. Este número de secciones se puede modificar utilizando el argumento breaks, aunque siempre se recomienda mantener al menos una sección a 1.3 m para una mejor estimación del diámetro normal. Cuando solo se está interesado en el diámetro normal y se analizan bosques relativamente sencillos desde el punto de vista estructural y con buena visibilidad en torno a 1.3 m, se recomienda establecer el argumento como breaks = c(1, 1.3, 1.6), reduciendo así el tiempo de computación considerablemente. En cualquier caso, es importante incluir varias secciones, ya que en caso de no detectar un árbol a 1.3 m, habría posibilidad de detectarlo en secciones establecidas a otras alturas, incrementando así la probabilidad de detección de árboles. En tales casos, el diámetro normal será interpolado y estimado desde las secciones más próximas a 1.3 m.
 
