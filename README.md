@@ -78,7 +78,7 @@ treeMultiScan <- tree.detection.multi.scan(
   dir.result = dir.result)
 ```
 
-```{r echo=FALSE}
+```{r}
 kk <- read.csv(https://github.com/Libro-GEOFOREST/Capitulo15_LiDAR_terrestre/tree/main/Auxiliary/tree.tls.csv)
 head(kk)
 kableExtra::scroll_box(kable_input = kableExtra::kable(head(https://github.com/Libro-GEOFOREST/Capitulo15_LiDAR_terrestre/tree/main/Auxiliary/tree.tls.csv), format = "html"), width = "100%")
