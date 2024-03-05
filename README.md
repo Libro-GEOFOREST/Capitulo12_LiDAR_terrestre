@@ -83,7 +83,7 @@ library(readr)
 library(knitr)
 
 # URL del archivo CSV en GitHub
-url <- "https://raw.githubusercontent.com/username/repository/branch/data.csv](https://github.com/Libro-GEOFOREST/Capitulo15_LiDAR_terrestre/tree/main/Auxiliary/tree.tls.csv"
+url <- "https://github.com/Libro-GEOFOREST/Capitulo15_LiDAR_terrestre/tree/main/Auxiliary/tree.tls.csv"
 
 # Leer el archivo CSV desde GitHub
 df <- read_csv(url)
