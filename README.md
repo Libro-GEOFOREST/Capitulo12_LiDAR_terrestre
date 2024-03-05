@@ -79,20 +79,28 @@ treeMultiScan <- tree.detection.multi.scan(
 ```
 
 ```r
-library(readr)
-library(knitr)
-
-# URL del archivo CSV en GitHub
-url <- "https://github.com/Libro-GEOFOREST/Capitulo15_LiDAR_terrestre/tree/main/Auxiliary/tree.tls.csv"
-
-# Leer el archivo CSV desde GitHub
-df <- read_csv(url)
-
-# Convertir el dataframe en una tabla Markdown
-markdown_table <- knitr::kable(df)
-
-# Imprimir la tabla Markdown
-cat(markdown_table)
+| id               | file                 | tree | x      | y      | phi  | h.dist | dbh   | h     | h.com | v    | v.com | SS.max | sinuosity | n.pts | n.pts.red | n.pts.est | n.pts.red.est | partial.occlusion |
+|------------------|----------------------|------|--------|--------|------|--------|-------|-------|-------|------|-------|--------|-----------|-------|-----------|-----------|---------------|-------------------|
+| GaliciaMultiScan | GaliciaMultiScan.txt | 1    | 0.34   | 3.07   | 1.46 | 3.08   | 31.43 | 21.49 | 7.76  | 0.58 | 0.45  | 2.38   | 1.28      | 1170  | 591       | 803       | 401           | 1                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 2    | -3.69  | -2.04  | 3.65 | 4.22   | 34.07 | 23.85 | 9.53  | 0.74 | 0.61  | 0.83   | 4.31      | 1484  | 750       | 870       | 435           | 1                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 3    | 4.77   | -0.34  | 6.21 | 4.78   | 48.17 | 22.31 | 12.38 | 1.40 | 1.31  | 0.28   | 1.03      | 1563  | 767       | 1230      | 614           | 1                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 4    | -0.75  | -5.24  | 4.57 | 5.29   | 47.01 | 28.78 | 15.52 | 1.66 | 1.54  | 0.15   | 1.00      | 1555  | 768       | 1201      | 600           | 1                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 5    | -3.22  | -4.66  | 4.11 | 5.67   | 27.73 | 21.82 | 6.29  | 0.46 | 0.31  | 6.52   | 2.25      | 807   | 409       | 708       | 354           | 1                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 6    | -6.87  | 1.40   | 2.94 | 7.01   | 30.09 | 22.99 | 7.68  | 0.56 | 0.42  | 2.45   | 3.18      | 800   | 405       | 768       | 384           | 1                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 7    | -5.63  | -5.47  | 3.91 | 7.85   | 29.58 | 18.01 | 6.04  | 0.44 | 0.33  | 7.00   | 2.22      | 930   | 454       | 756       | 377           | 1                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 8    | 2.11   | 9.37   | 1.35 | 9.61   | 48.11 | 27.48 | 15.09 | 1.67 | 1.56  | 0.34   | 1.00      | 2155  | 1089      | 1229      | 614           | 1                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 9    | 2.11   | 9.37   | 1.35 | 9.61   | 48.11 | 18.12 | 10.16 | 1.17 | 1.10  | 0.26   | 1.01      | 2155  | 1089      | 1229      | 614           | 1                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 10   | 7.80   | 5.92   | 0.65 | 9.80   | 24.54 | 12.54 | 3.84  | 0.29 | 0.17  | 4.26   | 1.43      | 594   | 294       | 627       | 313           | 1                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 11   | -2.32  | 9.69   | 1.81 | 9.97   | 22.34 | 18.37 | 2.84  | 0.26 | 0.11  | NA     | NA        | 879   | 443       | 571       | 285           | 1                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 12   | 9.76   | -2.51  | 6.03 | 10.08  | 34.64 | 22.78 | 9.33  | 0.74 | 0.61  | 2.98   | 3.16      | 722   | 367       | 885       | 442           | 1                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 13   | -7.07  | 7.95   | 2.30 | 10.64  | 32.62 | 22.35 | 8.48  | 0.64 | 0.51  | 0.18   | 1.01      | 474   | 235       | 833       | 416           | 0                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 14   | 6.35   | -9.34  | 5.31 | 11.30  | 29.83 | 22.33 | 7.38  | 0.54 | 0.40  | 0.36   | 1.02      | 439   | 226       | 762       | 381           | 1                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 15   | 3.51   | -10.90 | 5.02 | 11.45  | 32.93 | 19.90 | 7.74  | 0.59 | 0.48  | 2.34   | 3.55      | 789   | 393       | 841       | 420           | 1                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 16   | -10.60 | 6.39   | 2.60 | 12.38  | 21.18 | 17.32 | 2.13  | 0.23 | 0.08  | 0.27   | 1.00      | 338   | 164       | 541       | 270           | 0                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 17   | -11.60 | -4.84  | 3.54 | 12.57  | 32.57 | 21.81 | 8.28  | 0.63 | 0.50  | 0.87   | 1.02      | 629   | 318       | 832       | 415           | 0                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 18   | -9.10  | -9.43  | 3.95 | 13.10  | 32.48 | 23.85 | 8.94  | 0.67 | 0.53  | 0.41   | 1.01      | 601   | 285       | 829       | 414           | 0                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 19   | -13.42 | 0.20   | 3.13 | 13.42  | 26.94 | 20.15 | 5.53  | 0.40 | 0.26  | 0.43   | 1.01      | 778   | 388       | 688       | 344           | 1                 |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 20   | -7.80  | -12.06 | 4.14 | 14.36  | 29.14 | 23.27 | 7.33  | 0.53 | 0.38  | NA     | NA        | 758   | 371       | 744       | 372           | 1                 |
 ```
 
 Aunque no se han mencionado hasta ahora, hay dos argumentos que pueden ser interesantes para mejorar la ratio de detección de árboles. Uno es el que define la sección en altura que se utiliza para la detección de árboles (argumento stem.section). Este argumento define la sección libre de ramas y sotobosque en la medida de lo posible que será utilizada para la detección de los fustes de los árboles en base a criterios relacionados con regiones de alta densidad de puntos, la cual en caso de no especificar nada, toma unos valores por defecto que suelen ser adecuados en muchos casos (stem.section = c(0.7, 3.5)). No obstante, estos valores podrán ser modificados dependiendo de las condiciones estructurales del bosque. Otro argumento interesante hace alusión al número de secciones horizontales que se tienen en cuenta tanto para la detección de árboles como para la reconstrucción de los fustes. Cuando no se especifica nada, las funciones para la detección de árboles considerarán secciones a razón de incrementos de 0.3 m desde una altura de 0.4 m hasta la altura máxima de la nube de puntos. Este número de secciones se puede modificar utilizando el argumento breaks, aunque siempre se recomienda mantener al menos una sección a 1.3 m para una mejor estimación del diámetro normal. Cuando solo se está interesado en el diámetro normal y se analizan bosques relativamente sencillos desde el punto de vista estructural y con buena visibilidad en torno a 1.3 m, se recomienda establecer el argumento como breaks = c(1, 1.3, 1.6), reduciendo así el tiempo de computación considerablemente. En cualquier caso, es importante incluir varias secciones, ya que en caso de no detectar un árbol a 1.3 m, habría posibilidad de detectarlo en secciones establecidas a otras alturas, incrementando así la probabilidad de detección de árboles. En tales casos, el diámetro normal será interpolado y estimado desde las secciones más próximas a 1.3 m.
