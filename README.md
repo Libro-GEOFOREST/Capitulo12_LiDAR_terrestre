@@ -69,13 +69,19 @@ A continuación se muestran el output obtenido para el escaneo múltiple:
 treeSingleScan <- tree.detection.single.scan(data = SingleScan,
   tls.resolution = list(point.dist = 6.34, tls.dist = 10),
   dir.result = dir.result)
+```
 
-# Escaneo múltiple de TLS (o tecnología SLAM)
+##### Escaneo múltiple de TLS (o tecnología SLAM)
 
+```r
 treeMultiScan <- tree.detection.multi.scan(
   data = MultiScan,
   d.top = 20, # Diámetro en punta delgada (cm)
   dir.result = dir.result)
+```
+
+```{r echo=FALSE}
+kableExtra::scroll_box(kable_input = kableExtra::kable(head(pcd.single), format = "html"), width = "100%")
 ```
 
 ### Variables de masa (o dasométricas)
