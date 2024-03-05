@@ -58,6 +58,7 @@ MultiScan <- normalize(
   scan.approach = "multi",
   dir.data = dir.data, dir.result = dir.result)
 ```
+A continuación se muestran el output obtenido para el escaneo múltiple:
 
 ```r
 # Escaneo único de TLS
