@@ -60,7 +60,7 @@ MultiScan <- normalize(
 ```
 A continuación se muestran el output obtenido para el escaneo múltiple:
 
-#### Proceso de detección de árboles y estimación de variables dendrométicas
+#### Proceso de detección de árboles y estimación de variables dendrométricas
 ##### Escaneo único de TLS
 
 ```r
