@@ -7,13 +7,13 @@ Antonio Jesús Ariza-Salamanca & Juan Alberto Molina-Valero
 ## Extracción de parámetros estructurales a nivel de parcela (caso práctico basado en el paquete de R FORTLS)
 
 ### Variables de árbol individual (o dendrométricas)
+##### Instalación de FORTLS
 
 ```r
-# Instalación y carga del paquete
-
 install.packages(“FORTLS”)
 library(FORTLS)
 ```
+
 #### Proceso de normalización
 ##### Escaneo único de TLS
 
