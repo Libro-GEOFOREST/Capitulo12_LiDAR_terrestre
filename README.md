@@ -64,8 +64,6 @@ A continuación se muestran el output obtenido para el escaneo múltiple:
 ##### Escaneo único de TLS
 
 ```r
-# Escaneo único de TLS
-
 treeSingleScan <- tree.detection.single.scan(data = SingleScan,
   tls.resolution = list(point.dist = 6.34, tls.dist = 10),
   dir.result = dir.result)
