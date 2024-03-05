@@ -14,8 +14,8 @@ Antonio Jesús Ariza-Salamanca & Juan Alberto Molina-Valero
 install.packages(“FORTLS”)
 library(FORTLS)
 ```
-
-#### Escaneo único de TLS
+#### Proceso de normalización
+##### Escaneo único de TLS
 
 ```r
 # Establecimiento del directorio de trabajo (se aconseja que sea el mismo en dir.data y dir.result)
