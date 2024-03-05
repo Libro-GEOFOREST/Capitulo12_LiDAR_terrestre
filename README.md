@@ -152,6 +152,7 @@ met.var <- metrics.variables(
 ```
 
 ### Optimización del diseño de parcela
+#### Simulaciones
 
 ```r
 # A continuación se descargan los datos homólogos a los 2 escaneos de TLS medidos en campo:
@@ -167,6 +168,8 @@ sim <- simulations(
   dir.data = dir.data, dir.result = dir.result)
 ```
 
+#### Estimación del sesgo relativo
+
 ```r
 # Variables de masa más comunes:
 
@@ -181,6 +184,8 @@ rb <- relative.bias(
   variables = "V.user", 
   dir.result = dir.result)
 ```
+
+#### Estimación de las correlaciones
 
 ```r
 # Correlaciones en base a las 16 parcelas de muestreo incluidas en los datos de ejemplo de FORTLS
