@@ -30,12 +30,10 @@ download.file("https://www.dropbox.com/scl/fi/c3sey8w5yvlq1c901c0pl/GaliciaSingl
 
 # Normalización
 
-SingleScan <- normalize(
-  las = "PinusRadiata.laz",
-  id = "PinusRadiata",
-  x.center = 0, y.center = 0, # Coordenadas del centro de la parcela
-  max.dist = 15,
-  dir.data = dir.data, dir.result = dir.result)
+SingleScan <- normalize(las = "GaliciaSingleScan.laz", id = "GaliciaSingleScan",
+                        x.center = 0, y.center = 0,
+                        max.dist = 15,
+                        dir.data = dir.data, dir.result = dir.result)
 ```
 
 En el código se han utilizado los argumentos más relevantes de la función normalize, que serían el nombre del archivo (incluyendo la extensión) conteniendo la nube de puntos (argumento las), el directorio donde se localiza la nube de puntos a normalizar (argumento dir.data) y donde se volcarán los resultados (argumento dir.result). Como ya se ha mencionado, es totalmente recomendable que ambos directorios coincidan a lo largo de todo el flujo de trabajo. Además, se incluyen otros argumentos como las coordenadas del centro de la parcela (argumentos x.center e y.center) que en este caso deben coincidir con el punto donde se estacionó el TLS por tratarse de un escaneo único (en este ejemplo este punto tiene coordenadas x=0 e y=0 en la nube de puntos original). Hay que tener en cuenta que, de no especificar las coordenadas del centro de la parcela, la función normalize considerará como punto central las medias aritméticas entre los valores máximos y mínimos de las coordenadas x e y (x=(x_min+x_max)/2; y=(y_min+y_max)/2). También se especificó una distancia máxima desde el centro de la parcela de 15 m (argumento max.dist), la cual, en caso de querer estimar variables de masa debería ser como mínimo igual al radio de parcela considerado como se verá más adelante. Por último, se asignó un identificador a la nube de puntos normalizada (argumento id), al cual se le asignaría el valor 1 en caso de no especificarlo en este argumento. En el caso de trabajar con escaneos múltiples de TLS o tecnología SLAM, hay que añadir el argumento scan.approach = "multi", tal y como se muestra en el siguiente código:
@@ -50,13 +48,12 @@ download.file("https://www.dropbox.com/scl/fi/gacmiqqdkfuprxkrafciz/GaliciaMulti
 
 # Normalización
 
-MultiScan <- normalize(
-  las = "PinusRadiataMultiScan.laz",
-  id = "PinusRadiataMultiScan",
-  x.center = 0, y.center = 0, # Coordenadas del centro de la parcela
-  max.dist = 15,
-  scan.approach = "multi",
-  dir.data = dir.data, dir.result = dir.result)
+MultiScan <- normalize(las = "GaliciaMultiScan.laz",
+                       id = "GaliciaMultiScan",
+                       x.center = 0, y.center = 0,
+                       max.dist = 15,
+                       scan.approach = "multi",
+                       dir.data = dir.data, dir.result = dir.result)
 ```
 A continuación se muestran el output obtenido para el escaneo múltiple:
 
