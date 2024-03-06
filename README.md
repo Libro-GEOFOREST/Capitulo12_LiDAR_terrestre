@@ -45,8 +45,8 @@ En el código se han utilizado los argumentos más relevantes de la función nor
 ```r
 # Descarga de la nube de puntos en formato laz
 
-download.file("https://www.dropbox.com/s/i905wj0lavklczb/PinusRadiataMultiScan.laz?dl=1",
-  destfile = file.path(dir.data, "PinusRadiataMultiScan.laz"), mode = "wb")
+download.file("https://www.dropbox.com/scl/fi/gacmiqqdkfuprxkrafciz/GaliciaMultiScan.laz?rlkey=86glhhez7ryxrl9jofgh0jtlx&dl=1",
+              destfile = file.path(dir.data, "GaliciaMultiScan.laz"), mode = "wb")
 
 # Normalización
 
