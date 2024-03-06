@@ -55,7 +55,7 @@ MultiScan <- normalize(las = "GaliciaMultiScan.laz",
                        scan.approach = "multi",
                        dir.data = dir.data, dir.result = dir.result)
 ```
-A continuación se muestran el output obtenido para el escaneo múltiple:
+A continuación se muestran las 5 primeras filas del output obtenido tras normalizar la nube de puntos del escaneo múltiple:
 
 | id               | file                 | point | x     | y     | z    | rho   | phi  | r     | theta | slope | prob | prob.selec |
 |------------------|----------------------|-------|-------|-------|------|-------|------|-------|-------|-------|------|------------|
