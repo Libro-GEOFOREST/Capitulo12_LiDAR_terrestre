@@ -57,6 +57,14 @@ MultiScan <- normalize(las = "GaliciaMultiScan.laz",
 ```
 A continuación se muestran el output obtenido para el escaneo múltiple:
 
+| id               | file                 | point | x     | y     | z    | rho   | phi  | r     | theta | slope | prob | prob.selec |
+|------------------|----------------------|-------|-------|-------|------|-------|------|-------|-------|-------|------|------------|
+| GaliciaMultiScan | GaliciaMultiScan.txt | 1     | -9.06 | -9.67 | 0.32 | 13.25 | 3.89 | 13.25 | 0.02  | 0.67  | 0.29 | 0          |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 2     | -9.07 | -9.66 | 0.32 | 13.25 | 3.90 | 13.25 | 0.02  | 0.67  | 0.79 | 1          |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 3     | -9.07 | -9.65 | 0.32 | 13.24 | 3.90 | 13.25 | 0.02  | 0.67  | 0.41 | 0          |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 4     | -9.07 | -9.66 | 0.32 | 13.25 | 3.90 | 13.25 | 0.02  | 0.67  | 0.88 | 1          |
+| GaliciaMultiScan | GaliciaMultiScan.txt | 5     | -9.08 | -9.64 | 0.32 | 13.24 | 3.90 | 13.25 | 0.02  | 0.67  | 0.94 | 1          |
+
 #### Proceso de detección de árboles y estimación de variables dendrométricas
 ##### Escaneo único de TLS
 
