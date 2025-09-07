@@ -10,8 +10,9 @@ Antonio Jesús Ariza-Salamanca & Juan Alberto Molina-Valero
 ##### Instalación de FORTLS
 
 ```r
-install.packages(“FORTLS”)
+install.packages("FORTLS")
 library(FORTLS)
+install_fortls_python_deps()
 ```
 
 #### Proceso de normalización
