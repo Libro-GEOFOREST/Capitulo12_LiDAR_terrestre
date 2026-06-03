@@ -76,7 +76,7 @@ A continuación se muestran las 5 primeras filas del output obtenido tras normal
 treeSingleScan <- tree.detection.single.scan(data = SingleScan,
   tls.resolution = list(point.dist = 6.34, tls.dist = 10),
   threads = parallel::detectCores()-2,
-  dir.result = dir.result)
+  dir.data = dir.data, dir.result = dir.result)
 ```
 
 ##### Escaneo múltiple de TLS (o tecnología SLAM)
