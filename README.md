@@ -34,6 +34,8 @@ download.file("https://www.dropbox.com/scl/fi/c3sey8w5yvlq1c901c0pl/GaliciaSingl
 SingleScan <- normalize(las = "GaliciaSingleScan.laz", id = "GaliciaSingleScan",
                         x.center = 0, y.center = 0,
                         max.dist = 15,
+                        scan.approach = "single",
+                        threads = parallel::detectCores()-2,
                         dir.data = dir.data, dir.result = dir.result)
 ```
 
@@ -54,6 +56,7 @@ MultiScan <- normalize(las = "GaliciaMultiScan.laz",
                        x.center = 0, y.center = 0,
                        max.dist = 15,
                        scan.approach = "multi",
+                       threads = parallel::detectCores()-2,
                        dir.data = dir.data, dir.result = dir.result)
 ```
 A continuación se muestran las 5 primeras filas del output obtenido tras normalizar la nube de puntos del escaneo múltiple:
@@ -72,6 +75,7 @@ A continuación se muestran las 5 primeras filas del output obtenido tras normal
 ```r
 treeSingleScan <- tree.detection.single.scan(data = SingleScan,
   tls.resolution = list(point.dist = 6.34, tls.dist = 10),
+  threads = parallel::detectCores()-2,
   dir.result = dir.result)
 ```
 
@@ -81,7 +85,8 @@ treeSingleScan <- tree.detection.single.scan(data = SingleScan,
 treeMultiScan <- tree.detection.multi.scan(
   data = MultiScan,
   d.top = 20, # Diámetro en punta delgada (cm)
-  dir.result = dir.result)
+  threads = parallel::detectCores()-2,
+  dir.data = dir.data, dir.result = dir.result)
 ```
 A continuación se muestra la lista de árboles detectados y las variables estimadas para el escaneo múltiple:
 
@@ -159,6 +164,7 @@ tree.tls <- tree.detection.several.plots(
   max.dist = 25,
   tls.resolution = list(point.dist = 7.67, tls.dist = 10),
   scan.approach = "single",
+  threads = parallel::detectCores()-2,
   dir.data = dir.data, dir.result = dir.result)
 
 # Implementación de las metodologías para corregir las estimaciones por las oclusiones generadas
@@ -190,6 +196,7 @@ tree.field <- read.csv("tree.field.csv")
 sim <- simulations(
   tree.tls = tree.tls, tree.ds = tree.ds, tree.field = tree.field,
   plot.parameters = data.frame(radius.max = 20, k.max = 25, BAF.max = 4),
+  scan.approach = "single",
   dir.data = dir.data, dir.result = dir.result)
 ```
 
