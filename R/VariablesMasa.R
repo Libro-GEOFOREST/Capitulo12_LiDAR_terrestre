@@ -152,6 +152,7 @@ sim <- simulations(
   tree.ds = tree.ds,
   tree.field = tree.field,
   plot.parameters = data.frame(radius.max = 20, k.max = 25, BAF.max = 4),
+  scan.approach = "single",
   dir.data = dir.data, dir.result = dir.result)
 
 # 8.Sesgo relativo -------------------------------------------------------------
