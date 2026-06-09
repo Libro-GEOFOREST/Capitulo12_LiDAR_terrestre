@@ -90,7 +90,7 @@ treeMultiScan <- tree.detection.multi.scan(
 ```
 A continuación se muestra la lista de árboles detectados y las variables estimadas para el escaneo múltiple:
 
-| id               | file                 | tree | x      | y      | phi  | h.dist | dbh   | h     | h.com | v    | v.com | SS.max | sinuosity | n.pts | n.pts.red | n.pts.est | n.pts.red.est | partial.occlusion |
+| id               | file                 | tree | x      | y      | phi  | h.dist | dbh   | h     | h.mer | v    | v.mer | SS.max | sinuosity | n.pts | n.pts.red | n.pts.est | n.pts.red.est | partial.occlusion |
 |------------------|----------------------|------|--------|--------|------|--------|-------|-------|-------|------|-------|--------|-----------|-------|-----------|-----------|---------------|-------------------|
 | GaliciaMultiScan | GaliciaMultiScan.txt | 1    | 0.34   | 3.07   | 1.46 | 3.08   | 31.43 | 21.49 | 7.76  | 0.58 | 0.45  | 2.38   | 1.28      | 1170  | 591       | 803       | 401           | 1                 |
 | GaliciaMultiScan | GaliciaMultiScan.txt | 2    | -3.69  | -2.04  | 3.65 | 4.22   | 34.07 | 23.85 | 9.53  | 0.74 | 0.61  | 0.83   | 4.31      | 1484  | 750       | 870       | 435           | 1                 |
