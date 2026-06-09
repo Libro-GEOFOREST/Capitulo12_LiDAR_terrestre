@@ -71,6 +71,8 @@ download.file("https://www.dropbox.com/scl/fi/gacmiqqdkfuprxkrafciz/GaliciaMulti
 SingleScan <- normalize(las = "GaliciaSingleScan.laz", id = "GaliciaSingleScan",
                         x.center = 0, y.center = 0,
                         max.dist = 15,
+                        scan.approach = "single",
+                        threads = parallel::detectCores()-2,
                         dir.data = dir.data, dir.result = dir.result)
 
 
@@ -83,6 +85,7 @@ MultiScan <- normalize(las = "GaliciaMultiScan.laz",
                        x.center = 0, y.center = 0,
                        max.dist = 15,
                        scan.approach = "multi",
+                       threads = parallel::detectCores()-2,
                        dir.data = dir.data, dir.result = dir.result)
 
 # 6.Detección de árboles -------------------------------------------------------
@@ -102,15 +105,17 @@ MultiScan <- normalize(las = "GaliciaMultiScan.laz",
 treeSingleScan <- tree.detection.single.scan(
   data = SingleScan,
   tls.resolution = list(point.dist = 6.34, tls.dist = 10),
-  dir.result = dir.result)
+  threads = parallel::detectCores()-2,
+  dir.data = dir.data, dir.result = dir.result)
 
 
 # Escaneo múltiple de TLS (o tecnología SLAM)
 
 treeMultiScan <- tree.detection.multi.scan(
   data = MultiScan,
-  d.top = 20,
-  dir.result = dir.result)
+  d.mer = 20,
+  threads = parallel::detectCores()-2,
+  dir.data = dir.data, dir.result = dir.result)
 
 # 7.Comprobación con datos de campo --------------------------------------------
 # Los datos de campo asociados a la parcela de ejemplo se encuentran también en
